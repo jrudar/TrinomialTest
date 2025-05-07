@@ -4,7 +4,7 @@ requires = ["hatchling"]
 
 [project]
 name = "TrinomialTest"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
     {name = "Josip Rudar", email = "joe.rudar@inspection.gc.ca"},
     {name = "Oliver Lung", email = "oliver.lung@inspection.gc.ca"}
