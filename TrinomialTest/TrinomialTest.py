@@ -115,7 +115,7 @@ def TrinomialTest(
 
     Notes
     -----
-    .. versionadded:: 1.7.0
+    .. versionadded:: 1.0.0
 
     References
     ----------
