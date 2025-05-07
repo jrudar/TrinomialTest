@@ -1,3 +1,5 @@
-from .TrinomialTest import TrinomialTest, MultipleTrinomialTest
+from .TrinomialTest import TrinomialTest, MultipleTrinomialTest, trinomial_test
 
-__all__ = ["TrinomialTest", "MultipleTrinomialTest"]
+__version__ = "1.0.3"
+
+__all__ = ["TrinomialTest", "MultipleTrinomialTest", "trinomial_test"]
