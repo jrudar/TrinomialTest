@@ -6,7 +6,7 @@ The trinomial test is a non-parametric statistical test for consistent differenc
 
 First one determines the number total number of positive and negative differences, D, and the number of tied differences between the two groups or the median, t. The number of ties and the total number of trials, N, is used to calculate the probability of a tie, p, using the first equation below. Following this, the multinomial distribution can be used to determine the probability associated with D or more ties, P(D) according to the second equation.
 
-In this package, one is also able to set a region of practical equivalence (ROPE) where the differences between paired data is zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups may be random. The default value of the ROPE is 0.
+In this package, one is also able to set a region of practical equivalence (ROPE). This increases the number of ties by setting differences to zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups or between each sample and the median may be random. The default value of the ROPE is 0.
 
 ```math
 p_{tie} = \frac{t}{N}
