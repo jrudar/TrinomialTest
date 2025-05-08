@@ -8,7 +8,7 @@ First one determines the number of positive, negative, and tied samples using th
 
 In this package, one is also able to set a region of practical equivalence (ROPE). This increases the number of ties by setting differences to zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups or between each sample and the median may be random. The default value of the ROPE is 0.
 
-**Calculation of the Number of Positive, Negative, and Tied Samples in the Two-Sample Case**\
+**Calculation of the Number of Positive, Negative, and Tied Samples in the Two-Sample Case**:
 ```math
 n_{+} = \sum_{i=1}^{N}1\left(x_{i} - y_{i} > 0\right)
 ```
@@ -19,7 +19,7 @@ n_{-} = \sum_{i=1}^{N}1\left(x_{i} - y_{i} < 0\right)
 t = \sum_{i=1}^{N}1\left(x_{i} - y_{i} = 0\right)
 ```
 
-**Calculation of the Number of Positive, Negative, and Tied Samples in the One-Sample Case**\
+**Calculation of the Number of Positive, Negative, and Tied Samples in the One-Sample Case**:
 ```math
 n_{+} = \sum_{i=1}^{N}1\left(x_{i} - median(X) > 0\right)
 ```
@@ -30,17 +30,17 @@ n_{-} = \sum_{i=1}^{N}1\left(x_{i} - median(X) < 0\right)
 t = \sum_{i=1}^{N}1\left(x_{i} = median(X)\right)
 ```
 
-**Calculation of the Test Statistic**\
+**Calculation of the Test Statistic**:
 ```math
 D = |n_{+} - n_{-}|
 ```
 
-**Calculate the Probability of a Tie**\
+**Calculate the Probability of a Tie**:
 ```math
 p_{tie} = \frac{t}{N}
 ```
 
-**Calculate the p-value**\
+**Calculate the p-value**:
 ```math
 P\left(D\right) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p_{tie}^{n-z-2k}\left(\frac{1-p_{tie}}{2}\right)^{z+2k}
 ```
