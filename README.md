@@ -10,7 +10,6 @@ First one determines the number positive, negative, and tied differences between
 
 ```math
 \leftP(D) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p^{n-z-2k}(\frac{1-p}{2})
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
 ```
 
 ### Install
