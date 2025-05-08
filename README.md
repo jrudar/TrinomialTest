@@ -1,6 +1,6 @@
 # TrinomialTest
 [![CI](https://github.com/jrudar/TrinomialTest/actions/workflows/ci.yml/badge.svg)](https://github.com/jrudar/TrinomialTest/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15353378.svg)](https://doi.org/10.5281/zenodo.15353378)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15367633.svg)](https://doi.org/10.5281/zenodo.15367633)
 
 The trinomial test is a non-parametric statistical test for consistent differences in medians or if a difference between the number of positive or negative differences between two groups. This test focuses on the direction (positive or negative) of the differences and the number of ties.
 
