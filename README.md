@@ -8,9 +8,7 @@ First one determines the number of positive, negative, and tied samples using th
 
 In this package, one is also able to set a region of practical equivalence (ROPE). This increases the number of ties by setting differences to zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups or between each sample and the median may be random. The default value of the ROPE is 0.
 
-```math
 I_{pos}, I_{neg}, and I_{tie} are indicator functions that return 1 if the input to the function is positive, negative, or zero.
-```
 
 **Calculation of the Number of Positive, Negative, and Tied Samples in the Two-Sample Case**:
 ```math
