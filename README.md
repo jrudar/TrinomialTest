@@ -10,12 +10,12 @@ First one determines the number total number of positive and negative difference
 
 Equation 1:
 ```math
-p = \frac{t}{N}
+Equation 1: p = \frac{t}{N}
 ```
 
 Equation 2:
 ```math
-P\left(D\right) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p^{n-z-2k}\left(\frac{1-p}{2}\right)^{z+2k}
+Equation 2: P\left(D\right) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p^{n-z-2k}\left(\frac{1-p}{2}\right)^{z+2k}
 ```
 
 ### Install
