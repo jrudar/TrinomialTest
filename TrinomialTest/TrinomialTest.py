@@ -178,7 +178,7 @@ def TrinomialTest(
             if z == nd:
                 prob_same = p_value
 
-        # H0: P_pos != P_neg
+        # H1: P_pos != P_neg
         if alternative == "two-sided":
             p_value_final = p_value * 2.0
 
@@ -189,7 +189,7 @@ def TrinomialTest(
                 if p_value_final > 1.0:
                     p_value_final = np.asarray(1.0)
 
-        # H0: P_pos < P_neg
+        # H1: P_pos < P_neg
         elif alternative == "less":
             if nd_sign < 0:
                 p_value_final = p_value
@@ -197,7 +197,7 @@ def TrinomialTest(
             else:
                 p_value_final = 1.0 - p_value + prob_same
 
-        # H0: P_pos > P_neg
+        # H1: P_pos > P_neg
         elif alternative == "greater":
             if nd_sign < 0:
                 p_value_final = 1.0 - p_value + prob_same
