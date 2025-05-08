@@ -2,7 +2,19 @@
 [![CI](https://github.com/jrudar/TrinomialTest/actions/workflows/ci.yml/badge.svg)](https://github.com/jrudar/TrinomialTest/actions/workflows/ci.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15353378.svg)](https://doi.org/10.5281/zenodo.15353378)
 
-The trinomial test is a non-parametric statistical test for consistent differences between paired data or medians.
+The trinomial test is a non-parametric statistical test for consistent differences in medians or if a difference between the number of positive or negative differences between two groups. This test focuses on the direction (positive or negative) of the differences and the number of ties.
+
+First one determines the number total number of positive and negative differences, D, and the number of tied differences between the two groups or the median, t. The number of ties and the total number of trials, N, is used to calculate the probability of a tie, p, using the first equation below. Following this, the multinomial distribution can be used to determine the probability associated with D or more ties, P(D) according to the second equation.
+
+In this package, one is also able to set a region of practical equivalence (ROPE) where the differences between paired data is zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups may be random. The default value of the ROPE is 0.
+
+```math
+p_{tie} = \frac{t}{N}
+```
+
+```math
+P\left(D\right) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p_{tie}^{n-z-2k}\left(\frac{1-p_{tie}}{2}\right)^{z+2k}
+```
 
 ### Install
 From PyPI:
