@@ -9,7 +9,7 @@ The trinomial test non-parametric test which can be used to determine if there i
 First one determines the number positive, negative, and tied differences between the two groups or the median, D. The number of ties is used to calculate the probability of a tie, p. Following this, the multinomial distribution can be used to determine the probability associated D or more ties according to the equation below:
 
 ```math
-\leftP(D) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p^{n-z-2k}\frac{1-p}{2}
+\leftP(D) = \sum_{z=D}^N\sum_{k=0}^{\frac{N-z}{2}}\frac{N!}{(n-z-2k)!(k+z)!k!}p^{n-z-2k} \frac{1-p}{2}
 ```
 
 ### Install
