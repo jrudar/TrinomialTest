@@ -4,9 +4,19 @@
 
 The trinomial test is a non-parametric statistical test for consistent differences in medians or if a difference between the number of positive or negative differences between two groups. This test focuses on the direction (positive or negative) of the differences and the number of ties.
 
-First one determines the number total number of positive and negative differences, D, and the number of tied differences between the two groups or the median, t. The number of ties and the total number of trials, N, is used to calculate the probability of a tie, p, using the first equation below. Following this, the multinomial distribution can be used to determine the probability associated with D or more ties, P(D) according to the second equation.
+First one determines the number of positive, negative, and tied samples using the first set of equations. Note, that these describe the two-sample case. In the one sample case, the median can be used to find the number of positives, negatives, and tied samples. The test statistic, D, is then calculated by taking the absolute value of the difference between the number of positives and negatives. The number of ties, t, and the total number of trials, N, is used to calculate the probability of a tie. Following this, the multinomial distribution can be used to determine the probability associated with D or more ties, P(D).
 
 In this package, one is also able to set a region of practical equivalence (ROPE). This increases the number of ties by setting differences to zero if the absolute value of the difference is smaller than the ROPE. This will inflate the number of ties but can be useful if one suspects that differences between groups or between each sample and the median may be random. The default value of the ROPE is 0.
+
+```math
+n_{+} = \sum_{i=0}^{N}1\left(x - y > 0\right)
+n_{-} = \sum_{i=0}^{N}1\left(x - y < 0\right)
+t = \sum_{i=0}^{N}1\left(x - y = 0\right)
+```
+
+```math
+D = |n_{+} - n_{-}|
+```
 
 ```math
 p_{tie} = \frac{t}{N}
