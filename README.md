@@ -10,7 +10,11 @@ In this package, one is also able to set a region of practical equivalence (ROPE
 
 ```math
 n_{+} = \sum_{i=0}^{N}1\left(x - y > 0\right)
+```
+```math
 n_{-} = \sum_{i=0}^{N}1\left(x - y < 0\right)
+```
+```math
 t = \sum_{i=0}^{N}1\left(x - y = 0\right)
 ```
 
