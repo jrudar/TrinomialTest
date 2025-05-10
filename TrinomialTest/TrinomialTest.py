@@ -32,7 +32,7 @@ def compute_differences(x: np.ndarray, y: Union[np.ndarray, None], rope: float):
     if type(y) != type(None):
         # If arrays are equal, zero differences
         if np.array_equal(x, y):
-            D = np.zeros(shape=(x.shape[1],), dtype=int)
+            D = np.zeros(shape=(x.shape[0],), dtype=int)
 
         else:
             # Get number of differences
@@ -41,8 +41,8 @@ def compute_differences(x: np.ndarray, y: Union[np.ndarray, None], rope: float):
             D = np.where(np.abs(D_vec) > rope, D_vec, 0.0)
 
     else:
-        if np.all(np.equal(x, x[0])):
-            D = np.zeros(shape=(x.shape[1],), dtype=int)
+        if np.all(np.equal(x, 0)):
+            D = np.zeros(shape=(x.shape[0],), dtype=int)
 
         else:
             D = np.where(np.abs(x) > rope, x, 0.0)
@@ -134,8 +134,17 @@ def TrinomialTest(
     D = compute_differences(x, y, rope)
 
     # If the arrays are equal, p-value = 1.0
-    if np.all(np.equal(x, x[0])):
-        return np.asarray(1.0)
+    if np.all(np.equal(D, 0)):
+
+        return TrinomialTestResult(
+                    statistic=np.asarray(0, dtype = int),
+                    pvalue=np.asarray(1.0),
+                    alternative=alternative,
+                    n_ties=np.asarray(D.shape[0], dtype = int),
+                    n_pos=np.asarray(0, dtype = int),
+                    n_neg=np.asarray(0, dtype = int),
+                    N=np.asarray(D.shape[0], dtype = int),
+                )
 
     else:
         # Calculate random variables and probabilities
@@ -255,6 +264,10 @@ def MultipleTrinomialTest(
     -------
     result : pd.DataFrame
         A dataframe containing the summary of each experiment.
+
+    Notes
+    -----
+    .. versionadded:: 1.0.0
     """
 
     if x.shape != y.shape:
